@@ -1,0 +1,116 @@
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  background-color: hsl(var(--b1));
+  /* border-bottom: 1px solid black; */
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+}
+
+.nav_links {
+  display: none;
+}
+
+.nav_link {
+  display: inline-flex;
+  cursor: pointer;
+  font-size: smaller;
+  font-weight: 600;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.nav_link > a {
+  text-decoration: none;
+}
+
+.nav_link > a:visited {
+  all: unset;
+}
+
+.logo {
+  justify-self: center;
+}
+
+.logo > a {
+  text-decoration: none;
+  font-size: large;
+  line-height: 0.75rem;
+
+  font-weight: bold;
+}
+
+.nav_togglers {
+  /* position: static; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: 1.25rem; */
+  margin-left: auto;
+  /* margin-right: 1rem; */
+  cursor: pointer;
+}
+
+.nav_toggler {
+  all: unset;
+  width: 1.25rem;
+}
+
+.nav_toggler_close {
+  all: unset;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: antiquewhite; */
+  /* position: fixed; */
+}
+
+.nav_toggler_close > svg {
+  width: 3rem;
+}
+
+.nav_toggler > span {
+  background-color: hsl(var(--b1));
+  height: 0.125rem;
+  width: 100%;
+  margin-bottom: 0.25rem;
+  display: block;
+  text-align: center;
+}
+
+@media screen and (min-width: 1024px) {
+  .nav_links {
+    display: flex;
+    align-items: center;
+    column-gap: 1.25rem;
+  }
+
+  .nav_links.left {
+    margin-right: auto;
+  }
+
+  .nav_links.right {
+    justify-content: flex-end;
+    margin-left: auto;
+    min-width: 286.267px;
+  }
+
+  .nav_togglers {
+    margin-right: 1.5rem;
+    display: none;
+  }
+
+  .nav_toggler_close > svg {
+    width: 3.5rem;
+  }
+}

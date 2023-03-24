@@ -1,0 +1,12 @@
+.main {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* overflow: hidden auto; */
+}
+
+.main > main {
+  flex-grow: 1;
+  /* min-height: 100%; */
+}
