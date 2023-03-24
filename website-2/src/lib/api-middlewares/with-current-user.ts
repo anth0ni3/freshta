@@ -1,6 +1,6 @@
 import type { NextApiHandler, NextApiRequest, NextApiResponse } from 'next'
 import { unstable_getServerSession } from 'next-auth/next'
-import * as z from 'zod'
+import z from 'zod'
 
 import { authOptions } from '@/lib/auth'
 

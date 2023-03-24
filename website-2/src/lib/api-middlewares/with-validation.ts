@@ -1,5 +1,5 @@
 import type { NextApiHandler, NextApiRequest, NextApiResponse } from 'next'
-import { ZodError } from 'zod'
+import z from 'zod'
 import type { ZodSchema } from 'zod'
 
 export function withValidation<T extends ZodSchema>(schema: T, handler: NextApiHandler) {
@@ -11,7 +11,7 @@ export function withValidation<T extends ZodSchema>(schema: T, handler: NextApiH
 
 			return handler(req, res)
 		} catch (error) {
-			if (error instanceof ZodError) {
+			if (error instanceof z.ZodError) {
 				return res.status(422).json(error.issues)
 			}
 
